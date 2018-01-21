@@ -12,6 +12,21 @@ class School extends Model
         'city_id',
     ];
 
+    public function saveSchool($data)
+    {
+        $this->name = $data['name'];
+        $this->city = $data['city'];
+        $this->save();
+    }
+
+    public function updateSchool($data)
+    {
+        $school = $this->find($data['id']);
+        $school->name = $data['name'];
+        $school->city = $data['city'];
+        $school->save();
+    }
+
     public function city()
     {
         return $this->belongsTo(City::class);

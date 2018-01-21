@@ -10,21 +10,35 @@ class Teacher extends Model
         'email',
         'avatar_url',
         'name',
+        'subject',
         'gender',
         'active',
-        'graduated_at',
         'experience',
         'school_id',
     ];
 
-    proteted $hidden = [
-        'password',
-        'remember_token',
-    ];
+    public function saveTeacher($data)
+    {
+        $this->name= $data['name'];
+        $this->email= $data['email'];
+        $this->subject= $data['subject'];
+        $this->gender= $data['gender'];
+        $this->experience= $data['experience'];
+        $this->save();
+    }
+
+    public function updateTeacher($data)
+    {
+        $teacher = $this->find($data['id']);
+        $teacher->name = $data['name'];
+        $teacher->email= $data['email'];
+        $teacher->experience = $data['experience'];
+        $teacher->save();
+    }
 
     public function classes()
     {
-        return $this->hasMany(Class::class);
+        return $this->hasMany(Classes::class);
     }
 
     public function school()
