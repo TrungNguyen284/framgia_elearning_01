@@ -27,11 +27,6 @@ class School extends Model
         $school->save();
     }
 
-    public function city()
-    {
-        return $this->belongsTo(City::class);
-    }
-
     public function teachers()
     {
         return $this->hasMany(Teacher::class);

@@ -38,7 +38,7 @@ class Teacher extends Model
 
     public function classes()
     {
-        return $this->hasMany(Classes::class);
+        return $this->hasMany(LopHoc::class);
     }
 
     public function school()

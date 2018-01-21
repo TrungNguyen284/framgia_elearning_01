@@ -22,6 +22,6 @@ class Rate extends Model
 
     public function class()
     {
-        return $this->belongsTo(Class::class);
+        return $this->belongsTo(LopHoc::class);
     }
 }

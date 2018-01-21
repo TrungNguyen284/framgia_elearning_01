@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lophoc extends Model
 {
+    protected $table = 'classes';
     protected $fillable = [
         'name',
         'begin_at',

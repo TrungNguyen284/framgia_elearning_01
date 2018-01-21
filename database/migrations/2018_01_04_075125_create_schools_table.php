@@ -18,6 +18,7 @@ class CreateSchoolsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->unsignedInteger('city_id');
+            $table->timestamps();
         });
     }
 
