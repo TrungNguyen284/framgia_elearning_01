@@ -10,78 +10,20 @@
             </div>
 
             <div class="row">
-
+                @foreach($classes as $class)
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap wow fadeInDown">
                         <div class="pull-left">
-                            <img class="img-responsive" src="images/home/services/services1.png">
+                            <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/services/services1.png')}}">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">Đại học - Cao đẳng</h3>
+                            <a href="{{route('class_detail' , $class->id)}}"><h3 class="media-heading">{{ $class-> name}}</h3></a>
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/home/services/services2.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Luyện thi THPT</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/home/services/services3.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Luyện thi THPT</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/home/services/services4.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Luyện thi THPT</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/home/services/services5.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Luyện thi THPT</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/home/services/services6.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Luyện thi THPT</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>                                                
+                @endforeach
+                                                
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#services-->
@@ -105,21 +47,21 @@
             <div class="row">
                 <div class="col-md-4 wow fadeInDown">
                     <div class="clients-comments text-center">
-                        <img src="images/home/client1.png" class="img-circle" alt="">
+                        <img src="{{asset('assets/demo-bower/images/home/client1.png')}}" class="img-circle" alt="">
                         <h3>Đi thi chỉ cần thay số là 8 điểm</h3>
                         <h4><span>-Thầy Trần Bá Phương /</span>  ĐH Công nghiệp Hà Nội</h4>
                     </div>
                 </div>
                 <div class="col-md-4 wow fadeInDown">
                     <div class="clients-comments text-center">
-                        <img src="images/home/client2.png" class="img-circle" alt="">
+                        <img src="{{asset('assets/demo-bower/images/home/client1.png')}}" class="img-circle" alt="">
                         <h3>Đi thi chỉ cần thay số là 8 điểm</h3>
                         <h4><span>-Thầy Trần Bá Phương /</span>  ĐH Công nghiệp Hà Nội</h4>
                     </div>
                 </div>
                 <div class="col-md-4 wow fadeInDown">
                     <div class="clients-comments text-center">
-                        <img src="images/home/client3.png" class="img-circle" alt="">
+                        <img src="{{asset('assets/demo-bower/images/home/client1.png')}}" class="img-circle" alt="">
                         <h3>Đi thi chỉ cần thay số là 8 điểm</h3>
                         <h4><span>-Thầy Trần Bá Phương /</span>  ĐH Công nghiệp Hà Nội</h4>
                     </div>

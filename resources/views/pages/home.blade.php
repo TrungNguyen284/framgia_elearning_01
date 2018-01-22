@@ -15,13 +15,13 @@
 
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="{{asset('images/home/slider_one.jpg')}}" class="img-responsive" alt=""> 
+                            <img src="{{asset('assets/demo-bower/images/home/slider_one.jpg')}}" class="img-responsive" alt=""> 
                        </div>
                        <div class="item">
-                            <img src="{{asset('images/home/slider_one.jpg')}}" class="img-responsive" alt=""> 
+                            <img src="{{asset('assets/demo-bower/images/home/slider_one.jpg')}}" class="img-responsive" alt=""> 
                        </div> 
                        <div class="item">
-                            <img src="{{asset('images/home/slider_one.jpg')}}" class="img-responsive" alt=""> 
+                            <img src="{{asset('assets/demo-bower/images/home/slider_one.jpg')}}" class="img-responsive" alt=""> 
                        </div> 
                     </div>
                     
@@ -69,49 +69,40 @@
                             <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
                         </div>
                     </div><!--/.col-md-4-->
-                
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-leaf"></i>
-                            <h2>Adipisicing elit</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
 
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-cogs"></i>
-                            <h2>Sed do eiusmod</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-heart"></i>
-                            <h2>Labore et dolore</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-
+                    <form method="post">
+                        {{ csrf_field() }}
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
                             <h2>Chọn khóa học</h2>
-                            <select class="form-control"></select>    
+                            <select class="form-control lophoc" name="lophoc">
+                            @foreach($classes as $class)
+                                <option class="getid" value="{{ $class->id }}">{{ $class->name }}</option>
+                            @endforeach
+                            </select>    
                         </div>
+                        <div class="feature-wrap">
+                            <h2><br></h2>
+                            <h2><a class="btn btn-primary readmore" href="{{route('show_class_register')}}">Đăng ký khóa học</a></h2>   
+                        </div>                           
                     </div><!--/.col-md-4-->
 
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
                             <h2>Môn</h2>
-                            <select class="form-control"></select>    
+                            <select class="form-control monhoc" name="monhoc">
+                            <!-- @foreach($classes as $class) -->
+                                <option class="sub"></option>
+                            <!-- @endforeach -->
+                            </select>    
                         </div>
                     </div><!--/.col-md-4--> 
+                    </form>
 
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
                             <h2><br></h2>
-                            <h2><a class="btn btn-primary readmore" href="blog-item.html">Chi tiết</a></h2>   
+                            <h2><a class="btn btn-primary readmore test" href="" >Chi tiết</a></h2>   
                         </div>
                     </div><!--/.col-md-4--> 
 
@@ -131,12 +122,12 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="{{asset('images/home/portfolio/recent/item1.png')}}" alt="">
+                        <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/portfolio/recent/item1.png')}}" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Business theme</a> </h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="{{asset('images/home/portfolio/full/item1.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="{{asset('assets/demo-bower/images/home/portfolio/full/item1.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -144,12 +135,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="{{asset('images/home/portfolio/recent/item2.png')}}" alt="">
+                        <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/portfolio/recent/item2.png')}}" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Business theme</a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="{{asset('images/home/portfolio/full/item2.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="{{asset('assets/demo-bower/images/home/portfolio/full/item2.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -157,12 +148,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="{{asset('images/home/portfolio/recent/item3.png')}}" alt="">
+                        <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/portfolio/recent/item3.png')}}" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="{{asset('images/home/portfolio/full/item3.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="{{asset('assets/demo-bower/images/home/portfolio/full/item3.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -170,12 +161,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="{{asset('images/home/portfolio/recent/item4.png')}}" alt="">
+                        <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/portfolio/recent/item4.png')}}" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">MultiPurpose theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="{{asset('images/home/portfolio/full/item4.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="{{asset('assets/demo-bower/images/home/portfolio/full/item4.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -183,12 +174,12 @@
                 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="{{asset('images/home/portfolio/recent/item5.png')}}" alt="">
+                        <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/portfolio/recent/item5.png')}}" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Business theme</a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="{{asset('images/home/portfolio/full/item5.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="{{asset('assets/demo-bower/images/home/portfolio/full/item5.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -196,12 +187,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="{{asset('images/home/portfolio/recent/item6.png')}}" alt="">
+                        <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/portfolio/recent/item6.png')}}" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="{{asset('images/home/portfolio/full/item6.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="{{asset('assets/demo-bower/images/home/portfolio/full/item6.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -209,12 +200,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="{{asset('images/home/portfolio/recent/item7.png')}}" alt="">
+                        <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/portfolio/recent/item7.png')}}" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="{{asset('images/home/portfolio/full/item7.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="{{asset('assets/demo-bower/images/home/portfolio/full/item7.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -222,12 +213,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="{{asset('images/home/portfolio/recent/item8.png')}}" alt="">
+                        <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/portfolio/recent/item8.png')}}" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a href="#">Business theme </a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="{{asset('images/home/portfolio/full/item8.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="{{asset('assets/demo-bower/images/home/portfolio/full/item8.png')}}" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
@@ -302,7 +293,7 @@
                               <div class="panel-body">
                                   <div class="media accordion-inner">
                                         <div class="pull-left">
-                                            <img class="img-responsive" src="{{asset('images/home/accordion1.png')}}">
+                                            <img class="img-responsive" src="{{asset('assets/demo-bower/images/home/accordion1.png')}}">
                                         </div>
                                         <div class="media-body">
                                              <h4>Adipisicing elit</h4>

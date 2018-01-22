@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Laravel</title>
 
     <!-- Bootstrap -->
@@ -68,7 +69,7 @@
 		
     </header><!--/header-->
     @yield('content')
-
+    <script type="text/javascript" src="{{asset('assets/demo-bower/js/home/ajax.js')}}"></script>
     <script src="{{asset('assets/demo-bower/js/home/jquery.js')}}"></script>
     <script src="{{asset('assets/demo-bower/js/home/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/demo-bower/js/home/jquery.prettyPhoto.js')}}"></script>

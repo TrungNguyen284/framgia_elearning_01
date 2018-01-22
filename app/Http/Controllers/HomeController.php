@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\LopHoc;
 
 class HomeController extends Controller
 {
@@ -23,17 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home');
+        $classes = LopHoc::all();
+        return view('pages.home' , compact([
+            'classes',
+        ]));
     }
 
     public function about()
     {
         return view('pages.about-us');
-    }
-
-    public function classes()
-    {
-        return view('pages.classes');
     }
 
     public function fee()
@@ -44,11 +43,6 @@ class HomeController extends Controller
     public function support()
     {
         return view('pages.support');
-    }
-
-    public function teacher()
-    {
-        return view('pages.teachers');
     }
 
 }
